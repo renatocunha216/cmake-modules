@@ -1,0 +1,7 @@
+
+# Ignore build directories that start with _ #
+/_*
+
+
+# Ignore build-lib directory #
+/build-lib
