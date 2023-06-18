@@ -1,4 +1,7 @@
 
+*.exe
+*.dll
+
 # Ignore build directories that start with _ #
 /_*
 
