@@ -1,4 +1,4 @@
-
+.project
 *.exe
 *.dll
 
@@ -8,3 +8,4 @@
 
 # Ignore build-lib directory #
 /build-lib
+/.metadata/
