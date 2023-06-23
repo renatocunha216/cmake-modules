@@ -2,7 +2,7 @@
 # Library crypto-lib
 #
 
-add_compile_definitions(ADD_EXPORTS)
+add_compile_definitions(CRYPTO_EXPORTS)
  
 set(LIB_SOURCES
 src/crypto.c

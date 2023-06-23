@@ -2,32 +2,32 @@
  * crypto.h
  *
  *  Created on: 14 de mai de 2022
- *      Author: renato
+ *  Author: renato cunha
  */
 
-#ifndef SRC_ADD_H_
-#define SRC_ADD_H_
+#ifndef SRC_CRYPTO_H_
+#define SRC_CRYPTO_H_
 
 #ifdef _WIN32
 
-  /* You should define ADD_EXPORTS *only* when building the DLL. */
-  #ifdef ADD_EXPORTS
-    #define ADDAPI __declspec(dllexport)
-    #define ADDAPI_STR "__declspec(dllexport)"
+  /* You should define CRYPTO_EXPORTS *only* when building the DLL. */
+  #ifdef CRYPTO_EXPORTS
+    #define CRYPTOAPI __declspec(dllexport)
+    #define CRYPTOAPI_DEBUG "__declspec(dllexport)"
   #else
-    #define ADDAPI __declspec(dllimport)
-    #define ADDAPI_STR "__declspec(dllimport)"
+    #define CRYPTOAPI __declspec(dllimport)
+    #define CRYPTOAPI_DEBUG "__declspec(dllimport)"
 
   #endif
 
   /* Define calling convention in one place, for convenience. */
-  #define ADDCALL __cdecl
+  #define CRYPTOCALL __cdecl
 
 #else /* _WIN32 not defined. */
 
   /* Define with no value on non-Windows OSes. */
-  #define ADDAPI
-  #define ADDCALL
+  #define CRYPTOAPI
+  #define CRYPTOCALL
 
 #endif
 
@@ -36,11 +36,11 @@ extern "C"
 {
 #endif
 
-/* Declare our Add function using the above definitions. */
-ADDAPI int ADDCALL add(int a, int b);
+CRYPTOAPI void CRYPTOCALL encrypt(char* plainText, char* cryptText, size_t length);
+CRYPTOAPI void CRYPTOCALL decrypt(char* cryptText, char* painText, size_t length);
 
 #ifdef __cplusplus
 } // __cplusplus defined.
 #endif
 
-#endif /* SRC_ADD_H_ */
+#endif /* SRC_CRYPTO_H_ */

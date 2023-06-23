@@ -8,12 +8,16 @@
 
 #include <windows.h>
 #include <stdio.h>
+#include <string.h>
 #include <crypto.h>
+#include <_math.h>
 
 int main() {
-	int mult = 100;
-	int reais = 3;
- 	int centavos;	
+
+	char paintText[50];
+	char encryptText[50];
+	char decryptText[50];
+
     printf("DEMO 2\n");
 
 #if defined(_INFO_) || defined(_DEBUG_)	
@@ -25,10 +29,24 @@ int main() {
 #if defined(_TEST_)	
     printf("TEST MODE\n");
 #endif	
-	centavos = mult * reais;	
-    printf("Cents: %d\n", centavos);
-    printf("Sum: %d\n",  add(mult, reais));
-    printf("%s %d\n", ADDAPI_STR, __LINE__);
-	
+    printf("exe %s %d\n", CRYPTOAPI_DEBUG, __LINE__);
+
+    strcpy(paintText, "Plain text");
+
+    encrypt(paintText, encryptText, strlen(paintText));
+
+    printf("Plain text  : %s\n",  paintText);
+    printf("Encrypt text: %s\n",  encryptText);
+
+    decrypt(encryptText, decryptText, strlen(encryptText));
+
+    printf("Decrypt text: %s\n",  decryptText);
+
+    if (strcmp(paintText, decryptText) == 0) {
+        printf("Equals!\n");
+    }
+
+    printf("Sum: %d\n",  add(1, 1));
+
 	return 0;
 }

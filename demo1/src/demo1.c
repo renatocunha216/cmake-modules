@@ -8,12 +8,12 @@
 
 #include <windows.h>
 #include <stdio.h>
-#include <crypto.h>
+#include <_math.h>
 
 int main() {
-	int mult = 100;
-	int reais = 3;
- 	int centavos;	
+	int value1 = 100;
+	int value2 = 3;
+
     printf("DEMO 1\n");
 
 #if defined(_INFO_) || defined(_DEBUG_)	
@@ -25,10 +25,9 @@ int main() {
 #if defined(_TEST_)	
     printf("TEST MODE\n");
 #endif	
-	centavos = mult * reais;	
-    printf("Cents: %d\n", centavos);
-    printf("Sum: %d\n",  add(mult, reais));
-    printf("%s %d\n", ADDAPI_STR, __LINE__);
+
+    printf("exe %s %d\n", MATHAPI_DEBUG, __LINE__);
+    printf("Sum: %d\n",  add(value1, value2));
 	
 	return 0;
 }
