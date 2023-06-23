@@ -18,19 +18,19 @@ call cmake ^
 cd ..
 cd _release
 
-REM Generate make configuration files for MinGW in RELEASE mode (cmake default)
+rem Generate make configuration files for MinGW in RELEASE mode (cmake default)
 call cmake ^
 -D CMAKE_BUILD_TYPE=Release ^
 -D "CMAKE_MAKE_PROGRAM:PATH=C:/mingw64/bin/make.exe" ^
 -G "MinGW Makefiles" ..
 rem cd ..
-REM cd _test
+rem cd _test
 
-REM Generate make configuration files for MinGW in TEST mode (custom)
-REM call cmake ^
-REM -D CMAKE_BUILD_TYPE=Test ^
-REM -D "CMAKE_MAKE_PROGRAM:PATH=C:/mingw64/bin/make.exe" ^
-REM -G "MinGW Makefiles" ..
+rem Generate make configuration files for MinGW in TEST mode (custom)
+rem call cmake ^
+rem -D CMAKE_BUILD_TYPE=Test ^
+rem -D "CMAKE_MAKE_PROGRAM:PATH=C:/mingw64/bin/make.exe" ^
+rem -G "MinGW Makefiles" ..
 rem cd ..
 @echo End of creation of build files configuration using CMAKE.
 rem pause
