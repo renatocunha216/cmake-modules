@@ -46,7 +46,7 @@ The following directories configured for use by MinGW as make will be created.<b
 ./_release
 `
 
-2. Enter the generated directory and run the **make** command.
+3. Enter the generated directory and run the **make** command.
 ```
 >make
 [ 10%] Building C object math-lib/CMakeFiles/math-lib.dir/src/_math.c.obj
