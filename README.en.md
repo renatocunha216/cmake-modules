@@ -1,6 +1,6 @@
 # cmake-modules
-[![en](https://github.com/renatocunha216/common/blob/main/images/lang-en.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/main/README.en.md)
-[![pt-br](https://github.com/renatocunha216/common/blob/main/images/lang-pt-br.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/main/README.md)
+[![en](https://github.com/renatocunha216/common/blob/main/images/lang-en.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/master/README.en.md)
+[![pt-br](https://github.com/renatocunha216/common/blob/main/images/lang-pt-br.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/master/README.md)
 
 **Example** project of using cmake in a project written with C/C++ language with multiple modules (libraries and executables).
 
