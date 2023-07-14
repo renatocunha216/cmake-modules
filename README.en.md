@@ -2,32 +2,32 @@
 [![en](https://github.com/renatocunha216/common/blob/main/images/lang-en.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/main/README.en.md)
 [![pt-br](https://github.com/renatocunha216/common/blob/main/images/lang-pt-br.svg?raw=true)](https://github.com/renatocunha216/cmake-modules/blob/main/README.md)
 
-Projeto de **exemplo** de uso do cmake em um projeto escrito com linguagem C/C++ com multiplos módulos (bibliotecas e executáveis).
+**Example** project of using cmake in a project written with C/C++ language with multiple modules (libraries and executables).
 
-| Módulo     | Descrição                              | Dependência           |
-|------------|----------------------------------------|-----------------------|
-| crypto-lib | Biblioteca com funções criptográficas. |                       |
-| math-lib   | Biblioteca com funções matemáticas.    |                       |
-| demo1      | Aplicativo demonstração 1.             | math-lib              |
-| demo2      | Aplicativo demonstração 2.             | crypto-lib / math-lib |
+| Module     | Description                           | Dependencies          |
+|------------|---------------------------------------|-----------------------|
+| crypto-lib | Library with cryptographic functions. |                       |
+| math-lib   | Library with mathematical functions.  |                       |
+| demo1      | Demo application 1.                   | math-lib              |
+| demo2      | Demo application 2.                   | crypto-lib / math-lib |
 
 
-### Ferramentas utilizadas
+### Tools used
 
 - cmake-3.23.1
 - Mingw64 distribuição x86_64-8.1.0-release-win32-seh-rt_v6-rev0    
 
-### Utilização
+### How to use
 
 Windows:
 
-1. Defina a variável de ambiente **MINGW_HOME** com o caminho de instalação do mingw.<br>
+1. Set the MINGW_HOME environment variable to the mingw installation path.
 
-2. Execute o script batch **cmake-config.bat** para configurar os perfis de construção dos aplicativos.<br>
-No exemplo temos os perfis *Debug* e *Release* que cria sistemas de construção (build system generator) *MinGW Makefiles*.<br>
-Se necessário altere o arquivo **cmake-config.bat** conforme o caminho do aplicativo **make**.
+2. Run the **cmake-config.bat** batch script to configure the applications build profiles.<br>
+In the example we have the *Debug* and *Release* profiles that create build system generator *MinGW Makefiles*.<br>
+If necessary, change the **cmake-config.bat** file according to the **make** application path.
 
-Exemplo:
+Example:
 
 ```batch
 REM Generate make configuration files for MinGW in RELEASE mode (cmake default)
@@ -37,7 +37,7 @@ call cmake ^
 -G "MinGW Makefiles" ..
 ```
 
-Serão criados os seguintes diretórios configurados para uso do MinGW como make.<br>
+The following directories configured for use by MinGW as make will be created.<br>
 `
 ./_debug
 `
@@ -46,7 +46,7 @@ Serão criados os seguintes diretórios configurados para uso do MinGW como make
 ./_release
 `
 
-3. Entre no diretório gerado e execute o comando **make**.
+2. Enter the generated directory and run the **make** command.
 ```
 >make
 [ 10%] Building C object math-lib/CMakeFiles/math-lib.dir/src/_math.c.obj
