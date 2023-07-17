@@ -15,7 +15,7 @@
 ### Tools used
 
 - cmake-3.23.1
-- Mingw64 distribuição x86_64-8.1.0-release-win32-seh-rt_v6-rev0    
+- Mingw64 distribution x86_64-8.1.0-release-win32-seh-rt_v6-rev0
 
 ### How to use
 
