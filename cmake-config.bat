@@ -13,7 +13,7 @@ cd _debug
 rem Generate make configuration files for MinGW in DEBUG mode (cmake default)
 call cmake ^
 -D CMAKE_BUILD_TYPE=Debug ^
--D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/make.exe" ^
+-D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/mingw32-make.exe" ^
 -G "MinGW Makefiles" ..
 cd ..
 cd _release
@@ -21,7 +21,7 @@ cd _release
 rem Generate make configuration files for MinGW in RELEASE mode (cmake default)
 call cmake ^
 -D CMAKE_BUILD_TYPE=Release ^
--D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/make.exe" ^
+-D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/mingw32-make.exe" ^
 -G "MinGW Makefiles" ..
 rem cd ..
 rem cd _test
