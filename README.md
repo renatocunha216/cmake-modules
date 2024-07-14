@@ -33,7 +33,7 @@ Exemplo:
 REM Generate make configuration files for MinGW in RELEASE mode (cmake default)
 call cmake ^
 -D CMAKE_BUILD_TYPE=Release ^
--D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/make.exe" ^
+-D "CMAKE_MAKE_PROGRAM:PATH=%MINGW_HOME%/bin/mingw32-make.exe" ^
 -G "MinGW Makefiles" ..
 ```
 
@@ -46,7 +46,7 @@ Serão criados os seguintes diretórios configurados para uso do MinGW como make
 ./_release
 `
 
-3. Entre no diretório gerado e execute o comando **make**.
+3. Entre no diretório gerado e execute o comando **make** ou o comando **cmake --build .**.
 ```
 >make
 [ 10%] Building C object math-lib/CMakeFiles/math-lib.dir/src/_math.c.obj
